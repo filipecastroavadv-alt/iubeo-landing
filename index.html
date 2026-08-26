@@ -1,0 +1,508 @@
+<title>Salário-Maternidade IUBEO</title>
+<meta name="description" content="Informações sobre salário-maternidade para empregada, doméstica, rural, autônoma, facultativa e adotante. Filipe de Castro Aguiar Veloso, OAB/MG 247.126.">
+<style>
+
+  :root {
+    --azul-escuro: #12314f;
+    --azul-medio: #1d4b74;
+    --dourado: #a9832f;
+    --cinza-texto: #2c3438;
+    --cinza-claro: #6b7580;
+    --fundo-claro: #f6f4ef;
+    --branco: #ffffff;
+    --borda: #dcd7cb;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--cinza-texto);
+    background: var(--fundo-claro);
+    line-height: 1.55;
+    font-size: 18px;
+  }
+
+  a { color: inherit; }
+
+  img { max-width: 100%; display: block; }
+
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* HEADER */
+  header.site {
+    background: var(--azul-escuro);
+    color: var(--branco);
+    padding: 18px 0;
+  }
+  header.site .wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .marca {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+  }
+  .marca-oab {
+    font-size: 14px;
+    color: #c9d4de;
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--branco);
+    padding: 48px 0 40px;
+    border-bottom: 1px solid var(--borda);
+  }
+  .hero h1 {
+    font-size: 30px;
+    line-height: 1.3;
+    color: var(--azul-escuro);
+    margin-bottom: 16px;
+  }
+  .hero p.lead {
+    font-size: 19px;
+    color: var(--cinza-texto);
+    margin-bottom: 28px;
+    max-width: 620px;
+  }
+  .hero .regiao {
+    font-size: 15px;
+    color: var(--cinza-claro);
+    margin-bottom: 28px;
+  }
+  .hero .gancho {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--azul-escuro);
+    line-height: 1.3;
+    margin-bottom: 20px;
+  }
+
+  /* CTA BUTTON */
+  .btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #1d4b74;
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 600;
+    padding: 16px 28px;
+    border-radius: 8px;
+    border: 2px solid #1d4b74;
+  }
+  .btn-whatsapp:hover { background: var(--azul-escuro); border-color: var(--azul-escuro); }
+  .btn-whatsapp svg { width: 22px; height: 22px; flex-shrink: 0; }
+
+  .cta-sub {
+    font-size: 14px;
+    color: var(--cinza-claro);
+    margin-top: 10px;
+  }
+
+  /* CONTENT SECTIONS */
+  section.conteudo {
+    padding: 40px 0;
+  }
+  section.conteudo.alt {
+    background: var(--branco);
+    border-top: 1px solid var(--borda);
+    border-bottom: 1px solid var(--borda);
+  }
+  section.conteudo h2 {
+    font-size: 23px;
+    color: var(--azul-escuro);
+    margin-bottom: 18px;
+  }
+  section.conteudo p {
+    margin-bottom: 16px;
+    color: var(--cinza-texto);
+  }
+  ul.motivos {
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+  }
+  ul.motivos li {
+    background: var(--fundo-claro);
+    border-left: 4px solid var(--dourado);
+    padding: 14px 18px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    font-size: 17px;
+  }
+
+  .aviso-informativo {
+    background: #f0ede3;
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+    padding: 18px 20px;
+    font-size: 15px;
+    color: var(--cinza-claro);
+    margin-top: 24px;
+  }
+
+  /* CTA REPEAT SECTION */
+  .cta-final {
+    background: var(--azul-escuro);
+    color: var(--branco);
+    padding: 44px 0;
+    text-align: center;
+  }
+  .cta-final h2 {
+    font-size: 24px;
+    margin-bottom: 14px;
+    color: var(--branco);
+  }
+  .cta-final p {
+    color: #c9d4de;
+    margin-bottom: 26px;
+    font-size: 17px;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cta-final .btn-whatsapp {
+    background: var(--dourado);
+    border-color: var(--dourado);
+    color: var(--azul-escuro);
+  }
+  .cta-final .btn-whatsapp:hover { background: #93752b; border-color: #93752b; }
+
+  /* REGIONS */
+  .regioes-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+  }
+  .regiao-chip {
+    background: var(--fundo-claro);
+    border: 1px solid var(--borda);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: var(--cinza-texto);
+  }
+
+  /* FOOTER */
+  footer.site {
+    background: #0d2338;
+    color: #a9b6c4;
+    padding: 32px 0;
+    font-size: 14px;
+  }
+  footer.site .nome-adv {
+    color: var(--branco);
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+  footer.site .linha {
+    margin-bottom: 6px;
+  }
+  footer.site a.privacidade {
+    color: #cfd9e2;
+    text-decoration: underline;
+  }
+  footer.site .disclaimer {
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid #1d3b52;
+    font-size: 12.5px;
+    color: #7d8fa0;
+    line-height: 1.6;
+  }
+
+  /* FORMULÁRIO */
+  .form-box {
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    padding: 28px 24px;
+    margin-top: 8px;
+  }
+  .campo {
+    margin-bottom: 18px;
+  }
+  .campo label {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--azul-escuro);
+    margin-bottom: 6px;
+  }
+  .campo input[type="text"],
+  .campo input[type="tel"],
+  .campo select {
+    width: 100%;
+    font-size: 17px;
+    font-family: inherit;
+    color: var(--cinza-texto);
+    padding: 12px 14px;
+    border: 1px solid #b9c1c9;
+    border-radius: 6px;
+    background: var(--branco);
+  }
+  .campo input:focus,
+  .campo select:focus {
+    outline: 2px solid var(--azul-medio);
+    outline-offset: 1px;
+  }
+  fieldset.campo {
+    border: none;
+    padding: 0;
+  }
+  fieldset.campo legend {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--azul-escuro);
+    margin-bottom: 8px;
+    padding: 0;
+  }
+  .opcoes-radio {
+    display: flex;
+    gap: 20px;
+  }
+  .opcoes-radio label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--cinza-texto);
+  }
+  .opcoes-radio input[type="radio"] {
+    width: 20px;
+    height: 20px;
+  }
+  .btn-form {
+    width: 100%;
+    background: var(--dourado);
+    color: var(--azul-escuro);
+    border: 2px solid var(--dourado);
+    font-size: 18px;
+    font-weight: 700;
+    padding: 15px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .btn-form:hover { background: #93752b; border-color: #93752b; }
+  .form-aviso {
+    font-size: 13.5px;
+    color: var(--cinza-claro);
+    margin-top: 14px;
+  }
+  .divisor-ou {
+    text-align: center;
+    color: var(--cinza-claro);
+    font-size: 14px;
+    margin: 30px 0;
+    position: relative;
+  }
+
+  @media (max-width: 600px) {
+    body { font-size: 17px; }
+    .hero h1 { font-size: 25px; }
+    .hero p.lead { font-size: 17px; }
+    .hero .gancho { font-size: 20px; }
+    .btn-whatsapp { width: 100%; justify-content: center; font-size: 18px; }
+    section.conteudo h2 { font-size: 21px; }
+  }
+
+</style>
+
+
+<header class="site">
+  <div class="wrap">
+    <div class="marca">Filipe de Castro Aguiar Veloso — Advocacia Previdenciária</div>
+    <div class="marca-oab">OAB/MG 247.126</div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Teve um filho recentemente, está grávida ou passou por adoção?</h1>
+    <p class="lead">Empregada, doméstica, autônoma, rural, desempregada ou adotante: entenda as regras de cada categoria de segurada e a documentação exigida pelo INSS.</p>
+    <h2 class="gancho">Você pode ter direito ao salário-maternidade</h2>
+    <div class="regiao">Atendimento em São João da Ponte e região</div>
+
+    <a class="btn-whatsapp" id="cta-hero" href="#" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.017 2C6.494 2 2.017 6.477 2.017 12c0 1.981.583 3.825 1.588 5.373L2 22l4.767-1.579A9.937 9.937 0 0012.017 22C17.539 22 22.017 17.523 22.017 12S17.539 2 12.017 2zm0 18.16a8.14 8.14 0 01-4.15-1.135l-.297-.176-3.09.996.998-3.03-.192-.31A8.14 8.14 0 013.86 12c0-4.5 3.657-8.156 8.157-8.156 4.5 0 8.156 3.656 8.156 8.156 0 4.5-3.656 8.16-8.156 8.16z"/></svg>
+      Falar com o escritório pelo WhatsApp
+    </a>
+    <div class="cta-sub">O contato inicial serve para entender sua situação e esclarecer dúvidas sobre o caso.</div>
+  </div>
+</section>
+
+<section class="conteudo alt">
+  <div class="wrap">
+    <h2>Quem pode ter direito ao salário-maternidade</h2>
+    <p>O salário-maternidade é devido a diferentes categorias de seguradas do INSS, cada uma com regras e documentação próprias:</p>
+    <ul class="motivos">
+      <li><strong>Empregada (CLT):</strong> benefício pago diretamente pela empresa, com posterior compensação junto ao INSS</li>
+      <li><strong>Empregada doméstica:</strong> benefício pago diretamente pelo INSS</li>
+      <li><strong>Trabalhadora avulsa:</strong> vinculada a sindicato ou órgão gestor de mão de obra</li>
+      <li><strong>Segurada especial (trabalhadora rural):</strong> exercendo atividade rural em regime de economia familiar</li>
+      <li><strong>Contribuinte individual e segurada facultativa:</strong> mediante comprovação de contribuições ao INSS</li>
+      <li><strong>Desempregada dentro do período de graça:</strong> quando ainda mantém a qualidade de segurada mesmo sem contribuir no momento</li>
+      <li><strong>Mãe adotante ou que obteve guarda judicial para fins de adoção</strong></li>
+    </ul>
+    <p>O benefício também pode ser devido em casos de natimorto ou aborto não criminoso, com regras específicas para cada situação.</p>
+  </div>
+</section>
+
+<section class="conteudo">
+  <div class="wrap">
+    <h2>Documentação e prazos</h2>
+    <p>Cada categoria de segurada tem uma documentação própria exigida pelo INSS para o requerimento do salário-maternidade, além de prazos específicos de solicitação a partir do nascimento, adoção ou início do afastamento.</p>
+    <p>Requerimentos negados pelo INSS também podem ser objeto de recurso administrativo, dependendo do motivo do indeferimento apontado pelo próprio órgão.</p>
+    <div class="aviso-informativo">
+      Este conteúdo tem caráter informativo e não substitui a análise individual do seu caso. Cada categoria de segurada e cada situação previdenciária têm particularidades próprias.
+    </div>
+  </div>
+</section>
+
+<section class="conteudo">
+  <div class="wrap">
+    <h2>Prefere descrever sua situação antes de conversar?</h2>
+    <p>Preencha os campos abaixo. Ao enviar, uma conversa no WhatsApp é aberta automaticamente com essas informações, para agilizar o retorno do escritório.</p>
+
+    <form class="form-box" id="form-triagem">
+      <div class="campo">
+        <label for="campo-nome">Nome</label>
+        <input type="text" id="campo-nome" name="nome" required>
+      </div>
+
+      <div class="campo">
+        <label for="campo-telefone">Telefone / WhatsApp</label>
+        <input type="tel" id="campo-telefone" name="telefone" required>
+      </div>
+
+      <div class="campo">
+        <label for="campo-categoria">Qual sua situação atual?</label>
+        <select id="campo-categoria" name="categoria" required>
+          <option value="" disabled selected>Selecione uma opção</option>
+          <option value="Empregada (carteira assinada)">Empregada (carteira assinada)</option>
+          <option value="Empregada doméstica">Empregada doméstica</option>
+          <option value="Autônoma / MEI / Contribuinte Individual">Autônoma / MEI / Contribuinte Individual</option>
+          <option value="Trabalhadora rural">Trabalhadora rural</option>
+          <option value="Desempregada">Desempregada</option>
+          <option value="Adoção / guarda judicial">Adoção / guarda judicial</option>
+          <option value="Outra situação">Outra situação</option>
+        </select>
+      </div>
+
+      <fieldset class="campo">
+        <legend>Está contribuindo ou já contribuiu para o INSS recentemente?</legend>
+        <div class="opcoes-radio">
+          <label><input type="radio" name="contribuiu" value="Sim" required> Sim</label>
+          <label><input type="radio" name="contribuiu" value="Não" required> Não</label>
+          <label><input type="radio" name="contribuiu" value="Não sei" required> Não sei</label>
+        </div>
+      </fieldset>
+
+      <button type="submit" class="btn-form">Enviar e continuar no WhatsApp</button>
+      <div class="form-aviso">Estas informações são usadas apenas para direcionar o atendimento e não ficam armazenadas nesta página.</div>
+    </form>
+  </div>
+</section>
+
+<section class="conteudo alt">
+  <div class="wrap">
+    <h2>Região de atendimento</h2>
+    <p>Atendimento presencial e à distância para moradores de:</p>
+    <div class="regioes-lista">
+      <span class="regiao-chip">São João da Ponte</span>
+      <span class="regiao-chip">Lontra</span>
+      <span class="regiao-chip">Várzelândia</span>
+      <span class="regiao-chip">Patis</span>
+      <span class="regiao-chip">Ibiracatu</span>
+      <span class="regiao-chip">Januária</span>
+      <span class="regiao-chip">Brasília de Minas</span>
+      <span class="regiao-chip">Japonvar</span>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final">
+  <div class="wrap">
+    <h2>Tem dúvidas sobre o seu direito ao salário-maternidade?</h2>
+    <p>Envie uma mensagem contando resumidamente sua situação e sua categoria de segurada. O retorno é feito pelo próprio escritório.</p>
+    <a class="btn-whatsapp" id="cta-final" href="#" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.017 2C6.494 2 2.017 6.477 2.017 12c0 1.981.583 3.825 1.588 5.373L2 22l4.767-1.579A9.937 9.937 0 0012.017 22C17.539 22 22.017 17.523 22.017 12S17.539 2 12.017 2zm0 18.16a8.14 8.14 0 01-4.15-1.135l-.297-.176-3.09.996.998-3.03-.192-.31A8.14 8.14 0 013.86 12c0-4.5 3.657-8.156 8.157-8.156 4.5 0 8.156 3.656 8.156 8.156 0 4.5-3.656 8.16-8.156 8.16z"/></svg>
+      Iniciar conversa no WhatsApp
+    </a>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="nome-adv">Filipe de Castro Aguiar Veloso</div>
+    <div class="linha">OAB/MG 247.126</div>
+    <div class="linha">Atendimento: São João da Ponte e região — MG</div>
+    <div class="linha"><a class="privacidade" href="#politica-privacidade">Política de Privacidade</a></div>
+    <div class="disclaimer" id="politica-privacidade">
+      Os dados de contato informados nesta página (nome e telefone) são utilizados exclusivamente para retorno do escritório sobre a dúvida apresentada, não sendo compartilhados com terceiros. Nenhum dado sensível de saúde deve ser enviado por este canal antes de contato direto com o escritório. Este site tem finalidade exclusivamente informativa e não constitui garantia de resultado.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Configuração central do número de WhatsApp e mensagem pré-preenchida.
+  var numeroWhatsApp = "5538999145995"; // número confirmado pelo usuário
+  var mensagem = "Olá, vi a página sobre salário-maternidade e gostaria de mais informações.";
+  var link = "https://wa.me/" + numeroWhatsApp + "?text=" + encodeURIComponent(mensagem);
+
+  document.getElementById("cta-hero").setAttribute("href", link);
+  document.getElementById("cta-final").setAttribute("href", link);
+
+  // Evento de conversão para dataLayer (GTM/GA4) — dispara ao clicar em qualquer CTA de WhatsApp
+  function registrarConversaoWhatsApp() {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: "lead_whatsapp_click", pagina: "salario-maternidade" });
+  }
+  document.getElementById("cta-hero").addEventListener("click", registrarConversaoWhatsApp);
+  document.getElementById("cta-final").addEventListener("click", registrarConversaoWhatsApp);
+
+  // Formulário de triagem — não envia nem armazena dados em servidor algum;
+  // apenas monta a mensagem e abre a conversa no WhatsApp já qualificada.
+  document.getElementById("form-triagem").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    var nome = document.getElementById("campo-nome").value.trim();
+    var telefone = document.getElementById("campo-telefone").value.trim();
+    var categoria = document.getElementById("campo-categoria").value;
+    var contribuiu = document.querySelector('input[name="contribuiu"]:checked');
+    contribuiu = contribuiu ? contribuiu.value : "";
+
+    var msg = "Olá, meu nome é " + nome + ". Vi a página sobre salário-maternidade."
+      + " Situação: " + categoria + "."
+      + " Contribuindo/contribuiu recentemente para o INSS: " + contribuiu + "."
+      + " Meu telefone de contato: " + telefone + ".";
+
+    var linkForm = "https://wa.me/" + numeroWhatsApp + "?text=" + encodeURIComponent(msg);
+
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "lead_formulario_whatsapp",
+      pagina: "salario-maternidade",
+      categoria_segurada: categoria
+    });
+
+    window.open(linkForm, "_blank");
+  });
+</script>
+
+
